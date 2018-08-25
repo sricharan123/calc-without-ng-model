@@ -1,0 +1,9 @@
+.ulStyle {
+    list-style-type:none;
+    background-color: blue;
+    color: yellow;
+}
+
+.divMain {
+    text-align:center;
+}

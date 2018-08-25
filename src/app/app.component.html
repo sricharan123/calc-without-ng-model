@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <h1>
+    Data Inerpolation to {{ title }}!
+    number {{3}} + {{4}} is {{3 + 4}}
+  </h1>
+
+  <div class="form-group">
+    <p>
+        <label>First Number: </label>
+        <input type="number" class="form-control" name="firstNumber"  placeholder="Enter a first value"
+                   required #xValue>
+    </p>
+    <p>
+        <label>Second Number: </label>
+        <input type="number" class="form-control" name="secondNumber"  placeholder="Enter second value" 
+                required #yValue>
+    </p>
+    <p>
+      <label>Operator:  </label>
+      <select #opr>
+          <option *ngFor="let operator of operators" value= {{operator.id}}>
+              {{operator.name}}
+            </option>
+        </select>
+    </p>
+     <p><button type="button" (click)="calc(xValue.value, yValue.value, opr.value)">Calculator</button></p>
+      <p>Result: {{ result }}</p>
+  </div>
+ </div>
+
